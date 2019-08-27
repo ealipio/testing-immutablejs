@@ -36,7 +36,7 @@ describe('Using fromJS() to Convert Plain JavaScript Objects into Immutable Data
       'Help kids with homework',
       ['Buy Lemons', 'Make Lemonade']
     ];
-
+    // fromJS ( plainJS, [reviver function])
     const immutableTodo = fromJS(plainJSArray, (key, value) => {
       return value.toMap();
     });
